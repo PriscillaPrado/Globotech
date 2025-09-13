@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jogo da Velha</title>
+  <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+  <header>
+    <h1>Jogo da Velha</h1>
+  </header>
+
+  <main class="container">
+    <!-- Escolha dos símbolos -->
+    <section class="player-select">
+<div>
+  <label>Jogador 1:
+    <!-- eu sei que tem como colocar um select único, mas não tava dando certo -->
+    <select id="player1">
+      <option value="X">X</option>
+      <option value="O">O</option>
+      <option value="♥">♥ Coração</option>
+      <option value="★">★ Estrela</option>
+      <option value="♠">♠ Espadas</option>
+      <option value="♣">♣ Paus</option>
+      <option value="♦">♦ Copas</option>
+    </select>
+  </label>
+    <!-- começa com uma cor base pro 1 e pro 2 -->
+  <input type="color" id="player1Color" value="#d32f2f">
+</div>
+
+<div>
+  <label>Jogador 2:
+    <select id="player2">
+      <option value="O">O</option>
+      <option value="X">X</option>
+      <option value="♥">♥ Coração</option>
+      <option value="★">★ Estrela</option>
+      <option value="♠">♠ Espadas</option>
+      <option value="♣">♣ Paus</option>
+      <option value="♦">♦ Copas</option>
+    </select>
+  </label>
+  <input type="color" id="player2Color" value="#1976d2">
+</div>
+
+    </section>
+      <button id="startGame">Iniciar Jogo</button>
+    <!-- Placar -->
+    <section class="scoreboard">
+      <div>Jogador 1: <span id="score1">0</span></div>
+      <div>Jogador 2: <span id="score2">0</span></div>
+    </section>
+
+    <!-- Tabuleiro -->
+    <section class="board" id="board"></section>
+
+    <!-- Mensagens e reiniciar -->
+    <p id="message"></p>
+    <button id="resetGame">Reiniciar Partida</button>
+  </main>
+
+  <script src="../scripts/jogo.js"></script>
+</body>
+</html>
